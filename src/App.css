@@ -1,219 +1,114 @@
-.app {
+/* Base Styles */
+.app-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  flex-direction: column;
-}
-
-.header {
-  text-align: center;
-  font-size: 26px;
-  margin: 20px 0;
-  font-weight: 700;
   padding: 20px;
 }
 
-.note {
+.header-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.header-highlight {
   color: #f9d838;
 }
 
-.subHeader {
+/* Subheader Section */
+.subheader-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 90%;
   font-size: 20px;
   font-weight: 600;
 }
 
-.subHeader span:first-child {
+.subheader-user {
   display: flex;
   align-items: center;
   gap: 10px;
   font-weight: 900;
 }
 
-.hamsterIcon {
-  width: 50px;
-  height: 50px;
-}
-
-.span2 {
+.subheader-balance {
   display: flex;
   align-items: center;
   gap: 10px;
   font-weight: 900;
 }
 
-.iconContainer {
+.balance-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #c1a20b;
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px;
 }
 
-.welcomeContainer {
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-  border-top: 3px solid #f9d838;
-  width: 100%;
-  margin-top: 30px;
-  padding-top: 120px;
-  /* height: 300px; */
+/* Welcome Section */
+.welcome-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 100px;
+  margin-top: 30px;
   gap: 20px;
+  border-top: 3px solid #f9d838;
+  border-radius: 30px 30px 0 0;
 }
 
-.imageContainer {
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  padding: 20px;
   background-color: #f9d838;
-  width: fit-content;
-  display: block;
-  margin: auto;
 }
 
-.welcome-img {
+.welcome-image {
+  width: 100px;
+  height: 100px;
   object-fit: contain;
-  width: 120px;
-  height: 120px;
-  display: block;
 }
 
-p {
+.welcome-text {
   color: #fff;
   text-align: center;
-  .app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 20px;
-  }
-
-  .header {
-    text-align: center;
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-
-  .note {
-    color: #f9d838;
-  }
-
-  .subHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    font-size: 20px;
-    font-weight: 600;
-  }
-
-  .subHeader span:first-child {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 900;
-  }
-
-  .span2 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 900;
-  }
-
-  .iconContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #c1a20b;
-  }
-
-  .welcomeContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding-top: 100px;
-    margin-top: 30px;
-    gap: 20px;
-    border-top: 3px solid #f9d838;
-    border-radius: 30px 30px 0 0;
-  }
-
-  .imageContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background-color: #f9d838;
-  }
-
-  .welcome-img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-  }
-
-  p {
-    color: #fff;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 500;
-    width: 80%;
-    margin: 0;
-  }
-
-  .getStarted {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 15px 25px;
-    font-size: 18px;
-    font-weight: 900;
-    color: #1b1b1b;
-    background-color: #fff;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-
-  .getStarted:hover {
-    background-color: #f9d838;
-    transform: translateY(-2px);
-  }
-
-  font-size: 22px;
-  width: 80%;
+  font-size: 20px;
   font-weight: 500;
+  width: 80%;
+  margin: 0;
 }
 
-.getStarted {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 20px 30px;
+/* Button */
+.start-button {
   display: flex;
   align-items: center;
-  color: #1b1b1b;
+  justify-content: center;
   gap: 10px;
+  padding: 15px 25px;
   font-size: 18px;
   font-weight: 900;
+  color: #1b1b1b;
+  background-color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.start-button:hover {
+  background-color: #f9d838;
+  transform: translateY(-2px);
 }
