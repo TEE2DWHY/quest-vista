@@ -1,0 +1,80 @@
+/* Footer Layout */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b2b2b;
+  padding: 10px 0;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: #3c3c3c;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.task-icon {
+  background-color: #ff5757;
+}
+
+.top-icon {
+  background-color: #6c6cff;
+}
+
+.hed-hog-icon {
+  background-color: #ffc04a;
+  box-shadow: 0 0 10px 3px rgba(255, 192, 74, 0.8);
+}
+
+.game-icon {
+  background-color: #ff6bf5;
+}
+
+.friends-icon {
+  background-color: #6bff95;
+}
+
+.menu-label {
+  font-size: 12px;
+  color: #fff;
+}
+
+.menu-label.active {
+  font-weight: bold;
+  color: #ffce32;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff6c6c;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
