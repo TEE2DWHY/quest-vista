@@ -102,13 +102,16 @@
   font-size: 18px;
   font-weight: 900;
   color: #1b1b1b;
-  background-color: #fff;
+  background-color: #f9d838;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none;
+  font-family: inherit;
+  border: none;
 }
 
 .start-button:hover {
-  background-color: #f9d838;
+  background-color: #fff;
   transform: translateY(-2px);
 }

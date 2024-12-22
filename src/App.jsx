@@ -1,47 +1,19 @@
-import "./App.css";
-// import frameOne from "./assets/images/frame1.png";
-import welcome from "./assets/images/welcome.png";
-import { FaEthereum } from "react-icons/fa6";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { PiBirdFill } from "react-icons/pi";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
 
-function App() {
+const App = () => {
   return (
     <>
-      <div className="app-container">
-        <header className="header-title">
-          <span className="header-highlight">Qu</span>est Vi
-          <span className="header-highlight">st</span>a
-        </header>
-
-        <div className="subheader-container">
-          <span className="subheader-user">
-            <PiBirdFill />
-            Nick Jay
-          </span>
-          <span className="subheader-balance">
-            <div className="balance-icon-container">
-              <FaEthereum color="#fff" />
-            </div>
-            Ethereum
-          </span>
-        </div>
-
-        <div className="welcome-section">
-          <div className="image-wrapper">
-            <img src={welcome} alt="Welcome" className="welcome-image" />
-          </div>
-          <p className="welcome-text">
-            Welcome to <strong>Quest Vista</strong>! Start mining and earn Quest
-            Tokens while exploring the world of crypto rewards.
-          </p>
-          <button className="start-button">
-            Start Mining <FaArrowRightLong color="#1b1b1b" size={22} />
-          </button>
-        </div>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
-}
+};
 
 export default App;
