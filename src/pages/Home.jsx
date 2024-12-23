@@ -30,7 +30,6 @@ function Home() {
     }
   }, []);
 
-  console.log(username);
   return (
     <>
       <div className="app-container">
@@ -41,8 +40,7 @@ function Home() {
 
         <div className="subheader-container">
           <span className="subheader-user">
-            <PiBirdFill />
-            {username}
+            <PiBirdFill />@{username}
           </span>
           <span className="subheader-balance">
             <div className="balance-icon-container">
