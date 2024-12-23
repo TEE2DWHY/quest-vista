@@ -4,31 +4,10 @@ import welcome from "../assets/images/welcome.png";
 import { FaEthereum } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { PiBirdFill } from "react-icons/pi";
-import { useEffect, useState } from "react";
+import { useAccount } from "../hooks/useAccount";
 
 function Home() {
-  const [username, setUsername] = useState("");
-
-  useEffect(() => {
-    // Ensure the Telegram WebApp is available
-    if (window.Telegram && window.Telegram.WebApp) {
-      const tg = window.Telegram.WebApp;
-
-      // Initialize the Web App
-      tg.ready();
-
-      // Retrieve user information
-      const user = tg.initDataUnsafe.user;
-
-      if (user && user.username) {
-        setUsername(user.username); // Set the username
-      } else {
-        console.error("Username not available or user not logged in.");
-      }
-    } else {
-      console.error("Telegram WebApp not loaded.");
-    }
-  }, []);
+  const { userName } = useAccount();
 
   return (
     <>
@@ -40,7 +19,7 @@ function Home() {
 
         <div className="subheader-container">
           <span className="subheader-user">
-            <PiBirdFill />@{username}
+            <PiBirdFill />@{userName}
           </span>
           <span className="subheader-balance">
             <div className="balance-icon-container">

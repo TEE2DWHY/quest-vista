@@ -4,8 +4,10 @@ import { PiBirdLight } from "react-icons/pi";
 import { FaBitcoin } from "react-icons/fa6";
 import frameTwo from "../../assets/images/frame2.webp";
 import Footer from "./components/Footer";
+import { useAccount } from "../../hooks/useAccount";
 
 const Dashboard = () => {
+  const { userName } = useAccount();
   return (
     <div className="dashboard">
       <div className="container">
@@ -19,7 +21,7 @@ const Dashboard = () => {
                   </div>
                   Hey
                 </span>
-                <span className="userHandle">@NickJay</span>
+                <span className="userHandle">@{userName}</span>
               </div>
             </div>
             <div className="right">
