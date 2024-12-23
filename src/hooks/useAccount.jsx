@@ -6,18 +6,15 @@ const AccountWrapper = ({ children }) => {
   const [userName, setUserName] = useState("");
 
   useEffect(() => {
-    // Ensure the Telegram WebApp is available
     if (window.Telegram && window.Telegram.WebApp) {
       const tg = window.Telegram.WebApp;
 
-      // Initialize the Web App
       tg.ready();
 
-      // Retrieve user information
       const user = tg.initDataUnsafe.user;
 
       if (user && user.username) {
-        setUserName(user.username); // Set the username
+        setUserName(user.username);
       } else {
         console.error("Username not available or user not logged in.");
       }
