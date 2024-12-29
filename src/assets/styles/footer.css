@@ -28,7 +28,7 @@
 .icon {
   width: 40px;
   height: 40px;
-  background-color: #3c3c3c;
+  background-color: #3c3c3c; /* Default background color */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -36,27 +36,28 @@
   position: relative;
 }
 
+/* Custom icon backgrounds for each item */
+.home-icon {
+  background-color: #4caf50; /* Green */
+}
+
 .task-icon {
-  background-color: #ff5757;
+  background-color: #ff9800; /* Orange */
 }
 
-.top-icon {
-  background-color: #6c6cff;
-}
-
-.hed-hog-icon {
-  background-color: #ffc04a;
-  box-shadow: 0 0 10px 3px rgba(255, 192, 74, 0.8);
-}
-
-.game-icon {
-  background-color: #ff6bf5;
+.mine-icon {
+  background-color: #9c27b0; /* Purple */
 }
 
 .friends-icon {
-  background-color: #6bff95;
+  background-color: #03a9f4; /* Blue */
 }
 
+.assets-icon {
+  background-color: #ff5722; /* Red */
+}
+
+/* Active label style */
 .menu-label {
   font-size: 12px;
   color: #fff;
@@ -64,7 +65,7 @@
 
 .menu-label.active {
   font-weight: bold;
-  color: #ffce32;
+  color: #ffce32; /* Highlighted color for active tab */
 }
 
 .badge {
