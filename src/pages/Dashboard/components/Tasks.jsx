@@ -76,9 +76,7 @@ const Tasks = () => {
             </p>
             <p className="note">Payment verification will take ~5 mins.</p>
           </div>
-          <button className="catchButton" onClick={handleCatchClick}>
-            Catch
-          </button>
+          <button className="catchButton">Catch</button>
         </div>
       </div>
 
