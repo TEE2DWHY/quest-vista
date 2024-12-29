@@ -29,7 +29,7 @@ const Footer = ({ activeTab, setActiveTab }) => {
           <div
             key={index}
             className={`menu-item ${activeTab === item.label ? "active" : ""}`}
-            onClick={() => setActiveTab(item.label)} // Update active tab
+            onClick={() => setActiveTab(item.label)}
           >
             <div className={`icon ${item.className}`}>{item.icon}</div>
             <span className="menu-label">{item.label}</span>

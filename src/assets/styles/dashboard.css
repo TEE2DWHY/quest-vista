@@ -420,3 +420,182 @@
   font-family: inherit;
   margin-top: 10px;
 }
+
+/* Mine */
+.mineContainer {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.levelDisplay {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #ffcc00;
+}
+
+.miningArea {
+  position: relative;
+}
+
+.mineButton {
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 50%;
+  padding: 30px;
+  font-size: 40px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: bounce 1s infinite;
+}
+
+.mineButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hammerIcon {
+  color: #fff;
+  font-size: 30px;
+  animation: rotate 2s infinite linear;
+}
+
+/* Animation for Hammer Icon */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation for button bouncing */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.miningStatus {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Invite */
+.inviteContainer {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-in;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.invite-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.option {
+  background-color: #222;
+  padding: 10px;
+  border-radius: 8px;
+  /* display: flex; */
+  align-items: center;
+  animation: slideIn 0.5s ease-out;
+}
+
+.inviteIcon {
+  font-size: 40px;
+  margin-right: 15px;
+  color: #ffcc00;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.bonus {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.referral {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.friends-list {
+  margin-top: 30px;
+}
+
+.empty-list {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.invite-button {
+  margin-top: 20px;
+}
+
+.invite-button button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: inherit;
+}
+
+.invite-button button:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+.invite-button .share-button {
+  background-color: #4caf50;
+}
+
+.share-icon {
+  font-size: 20px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

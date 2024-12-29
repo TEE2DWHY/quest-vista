@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 import { useAccount } from "../../hooks/useAccount";
 import Tasks from "./components/Tasks"; // Import the Tasks component
 import { useState } from "react";
+import Mine from "./components/Mine";
+import Friends from "./components/Friends";
 
 const Dashboard = () => {
   const { userName } = useAccount();
@@ -19,6 +21,8 @@ const Dashboard = () => {
     switch (activeTab) {
       case "Task":
         return <Tasks />;
+      case "Friends":
+        return <Friends />;
       case "Home":
       default:
         return (
