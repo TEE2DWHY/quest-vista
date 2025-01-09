@@ -6,7 +6,7 @@ const Assets = () => {
     <div className="app-container">
       <div className="header">
         <div className="coins">
-          {[...Array(10)].map((_, index) => (
+          {[...Array(8)].map((_, index) => (
             <span key={index} className="coin">
               🪙
             </span>
