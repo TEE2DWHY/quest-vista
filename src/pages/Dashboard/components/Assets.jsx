@@ -3,7 +3,7 @@ import "../../../assets/styles/dashboard.css";
 
 const Assets = () => {
   return (
-    <div className="app-container">
+    <div className="assets-container">
       <div className="header">
         <div className="coins">
           {[...Array(8)].map((_, index) => (

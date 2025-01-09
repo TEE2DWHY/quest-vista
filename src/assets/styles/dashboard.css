@@ -20,7 +20,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  width: 92%;
+  width: 90%;
   background-color: #3c3c3c;
   padding: 20px;
   border-radius: 20px;
@@ -601,9 +601,9 @@ p {
 }
 
 /* Assets */
-.app-container {
+.assets-container {
   text-align: center;
-  width: 90%;
+  /* width: 90%; */
   max-width: 400px;
 }
 
@@ -646,15 +646,17 @@ p {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-bottom: 15px;
 }
 
 .card {
-  background: #1e1e1e;
+  background: #444444;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 6px rgb(92 87 87 / 50%);
   padding: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 92%;
+  margin-top: 20px;
 }
 
 .card:hover {
