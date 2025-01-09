@@ -9,6 +9,7 @@ import Tasks from "./components/Tasks"; // Import the Tasks component
 import { useState } from "react";
 import Mine from "./components/Mine";
 import Friends from "./components/Friends";
+import Assets from "./components/Assets";
 
 const Dashboard = () => {
   const { userName } = useAccount();
@@ -23,6 +24,8 @@ const Dashboard = () => {
         return <Tasks />;
       case "Friends":
         return <Friends />;
+      case "Assets":
+        return <Assets />;
       case "Home":
       default:
         return (
