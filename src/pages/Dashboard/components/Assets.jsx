@@ -19,7 +19,7 @@ const Assets = () => {
 
       <div className="card-container">
         {/* Stake & Earn */}
-        <div className="card">
+        <div className="card" data-aos="fade-in" aos-duration="3000">
           <div className="card-content">
             <div className="card-text">
               <h3>Stake & earn more Quest Tokens</h3>
@@ -30,7 +30,7 @@ const Assets = () => {
         </div>
 
         {/* Claim On-Chain */}
-        <div className="card">
+        <div className="card" data-aos="fade-in" aos-duration="3600">
           <div className="card-content">
             <div className="card-text">
               <h3>Claim On-Chain</h3>
@@ -41,7 +41,7 @@ const Assets = () => {
         </div>
 
         {/* Transfer Tokens */}
-        <div className="card">
+        <div className="card" data-aos="fade-in" aos-duration="4000">
           <div className="card-content">
             <div className="card-text">
               <h3>Transfer Tokens</h3>

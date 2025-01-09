@@ -43,18 +43,18 @@ const Tasks = () => {
           <span className="bullet">•</span> General Tasks
         </p>
         <ul className="taskList">
-          <li className="taskItem">
+          <li className="taskItem" data-aos="fade-in" aos-duration="3000">
             <FaTiktok className="taskIcon tiktok" /> Follow our TikTok page
           </li>
-          <li className="taskItem">
+          <li className="taskItem" data-aos="fade-in" aos-duration="3400">
             <FaYoutube className="taskIcon youtube" /> Subscribe to our YouTube
             channel
           </li>
-          <li className="taskItem">
+          <li className="taskItem" data-aos="fade-in" aos-duration="3900">
             <FaTwitter className="taskIcon twitter" /> Follow our Twitter
             account
           </li>
-          <li className="taskItem">
+          <li className="taskItem" data-aos="fade-in" aos-duration="4200">
             <FaInstagram className="taskIcon instagram" /> Follow our Instagram
             page
           </li>
