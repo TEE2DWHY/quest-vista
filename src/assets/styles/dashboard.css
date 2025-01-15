@@ -602,7 +602,7 @@ p {
 
 /* Assets */
 .assets-container {
-  text-align: center;
+  /* text-align: center; */
   /* width: 90%; */
   max-width: 400px;
 }
@@ -626,12 +626,14 @@ p {
 .balance {
   font-size: 3rem;
   color: #f39c12;
+  text-align: center;
 }
 
 .currency {
   margin: 0.5rem 0;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
 }
 
 .history {
@@ -639,6 +641,7 @@ p {
   color: #3498db;
   cursor: pointer;
   text-decoration: underline;
+  text-align: center;
 }
 
 /* Card Section */
