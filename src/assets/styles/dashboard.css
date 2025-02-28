@@ -639,6 +639,16 @@ p {
 
 .coin {
   font-size: 1.5rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .balance {
@@ -656,7 +666,7 @@ p {
 
 .history {
   font-size: 1rem;
-  color: #3498db;
+  color: #343fdb;
   cursor: pointer;
   text-decoration: underline;
   text-align: center;
@@ -714,6 +724,6 @@ p {
 }
 
 .action-btn:hover {
-  background: linear-gradient(90deg, #e67e22, #d35400);
+  background: linear-gradient(90deg, #2246e6, #092fd6);
   transform: scale(1.05);
 }
