@@ -29,45 +29,41 @@ const Dashboard = () => {
       case "Home":
       default:
         return (
-          <>
+          <div className="dashboard">
+            {/* Header */}
             <div className="header">
-              <div className="profile">
-                <div className="left">
-                  <div className="userName">
-                    <span className="imageContainer">
-                      <div className="iconContainer">
-                        <PiBirdLight fontSize={30} color="#fff" />
-                      </div>
-                      Hey
-                    </span>
-                    <span className="userHandle">@{userName}</span>
-                  </div>
-                </div>
-                <div className="right">
-                  Your Profile <MdOutlineKeyboardArrowRight size={20} />
-                </div>
-              </div>
-              <div className="score-section">
-                <div className="score">
-                  <span className="score-value">
-                    <FaBitcoin />
-                    875,009
-                  </span>
-                  <span className="score-label">Score</span>
-                </div>
-                <div className="ranking">
-                  <span className="ranking-value"># 11.7 M</span>
-                </div>
-              </div>
+              <span className="title">De-Fi</span>
+              <button className="inviteBtn">Invite friends</button>
             </div>
-            <p className="note">
-              your daily tasks would be updated on the task tab below. <br /> do
-              today's task and increase your reward!
-            </p>
-            <div className="imageContainer">
-              <img src={frameTwo} alt="" className="heroImage" />
+
+            {/* My Stake Card */}
+            <div className="stake-card">
+              <p className="card-title">My stake</p>
+              <h2 className="amount">$0</h2>
+              <p className="currency">0 SUI</p>
+              <p className="roi">
+                NET ROI <span className="roi-positive">+1%</span> ❓
+              </p>
+              <button className="action-button">Deposit</button>
             </div>
-          </>
+
+            {/* Earnings Available Card */}
+            <div className="earnings-card">
+              <p className="card-title">Earnings Available</p>
+              <h2 className="amount">$0</h2>
+              <p className="currency">0 SUI</p>
+              <div className="progress-bar"></div>
+              <p className="timeline">Staking timeline ❓</p>
+              <button className="action-button">Withdraw</button>
+            </div>
+
+            {/* Bottom Navigation */}
+            <div className="nav-bar">
+              <button className="nav-button active">Stats</button>
+              <button className="nav-button">Community</button>
+              <button className="nav-button">Activity</button>
+            </div>
+          </div>
         );
     }
   };

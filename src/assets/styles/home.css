@@ -11,13 +11,33 @@
 
 .header-title {
   text-align: center;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 40px;
+  animation: bounce 2s infinite; /* Adding the bounce animation */
 }
 
 .header-highlight {
-  color: #f9d838;
+  color: #5351d9;
+}
+
+/* Keyframes for the bounce animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* Start position */
+  }
+  25% {
+    transform: translateY(-10px); /* Upward bounce */
+  }
+  50% {
+    transform: translateY(0); /* Back to the original position */
+  }
+  75% {
+    transform: translateY(-5px); /* Smaller upward bounce */
+  }
+  100% {
+    transform: translateY(0); /* Back to the original position */
+  }
 }
 
 /* Subheader Section */
@@ -51,7 +71,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #c1a20b;
+  background-color: #5351d9;
 }
 
 /* Welcome Section */
@@ -64,8 +84,9 @@
   padding-top: 100px;
   margin-top: 30px;
   gap: 20px;
-  border-top: 3px solid #f9d838;
+  border-top: 3px solid #5351d9;
   border-radius: 30px 30px 0 0;
+  font-family: inherit;
 }
 
 .image-wrapper {
@@ -75,7 +96,7 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background-color: #f9d838;
+  background-color: #5351d9;
 }
 
 .welcome-image {
@@ -103,13 +124,14 @@
   font-size: 18px;
   font-weight: 900;
   color: #1b1b1b;
-  background-color: #f9d838;
+  background-color: #5351d9;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   outline: none;
   font-family: inherit;
   border: none;
+  color: #fff;
 }
 
 .start-button:hover {

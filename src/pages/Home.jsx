@@ -39,7 +39,7 @@ function Home() {
           </p>
           <a href="/dashboard">
             <button className="start-button">
-              Start Mining <FaArrowRightLong color="#1b1b1b" size={22} />
+              Start Mining <FaArrowRightLong color="#ffff" size={22} />
             </button>
           </a>
         </div>
