@@ -1,4 +1,3 @@
-/* Base Styles */
 .app-container {
   display: flex;
   flex-direction: column;
@@ -14,33 +13,30 @@
   font-size: 36px;
   font-weight: 900;
   margin-bottom: 40px;
-  animation: bounce 2s infinite; /* Adding the bounce animation */
+  animation: bounce 2s infinite;
 }
 
 .header-highlight {
   color: #5351d9;
 }
-
-/* Keyframes for the bounce animation */
 @keyframes bounce {
   0% {
-    transform: translateY(0); /* Start position */
+    transform: translateY(0);
   }
   25% {
-    transform: translateY(-10px); /* Upward bounce */
+    transform: translateY(-10px);
   }
   50% {
-    transform: translateY(0); /* Back to the original position */
+    transform: translateY(0);
   }
   75% {
-    transform: translateY(-5px); /* Smaller upward bounce */
+    transform: translateY(-5px);
   }
   100% {
-    transform: translateY(0); /* Back to the original position */
+    transform: translateY(0);
   }
 }
 
-/* Subheader Section */
 .subheader-container {
   display: flex;
   justify-content: space-between;
@@ -74,7 +70,6 @@
   background-color: #5351d9;
 }
 
-/* Welcome Section */
 .welcome-section {
   display: flex;
   flex-direction: column;
@@ -114,7 +109,6 @@
   margin: 0;
 }
 
-/* Button */
 .start-button {
   display: flex;
   align-items: center;

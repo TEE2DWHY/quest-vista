@@ -8,7 +8,6 @@
   position: relative;
 }
 
-/* Header */
 .dashboard-header {
   display: flex;
   justify-content: space-between;
@@ -43,7 +42,6 @@
   border-radius: 30px;
 }
 
-/* Card Styles */
 .stake-card,
 .earnings-card {
   background: linear-gradient(135deg, #1d4ed8, rgb(249, 111, 221));
@@ -220,7 +218,6 @@
   padding: 3px 6px;
 }
 
-/* Daily Combo Section */
 .dailyCombo {
   text-align: left;
 }
@@ -254,7 +251,6 @@
   cursor: pointer;
 }
 
-/* Special Gift Section */
 .specialGift {
   margin-top: 20px;
 }

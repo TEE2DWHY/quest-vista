@@ -30,7 +30,7 @@
 .icon {
   width: 40px;
   height: 40px;
-  background-color: #3c3c3c; /* Default background color */
+  background-color: #3c3c3c;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -38,25 +38,24 @@
   position: relative;
 }
 
-/* Custom icon backgrounds for each item */
 .home-icon {
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
 }
 
 .task-icon {
-  background-color: #ff9800; /* Orange */
+  background-color: #ff9800;
 }
 
 .mine-icon {
-  background-color: #9c27b0; /* Purple */
+  background-color: #9c27b0;
 }
 
 .friends-icon {
-  background-color: #03a9f4; /* Blue */
+  background-color: #03a9f4;
 }
 
 .assets-icon {
-  background-color: #ff5722; /* Red */
+  background-color: #ff5722;
 }
 
 /* Active label style */
@@ -67,7 +66,7 @@
 
 .menu-label.active {
   font-weight: bold;
-  color: #ffce32; /* Highlighted color for active tab */
+  color: #ffce32;
 }
 
 .badge {
