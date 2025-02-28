@@ -1,22 +1,23 @@
 import React from "react";
-import { FaGift, FaTelegramPlane } from "react-icons/fa";
+import { FaGift, FaTelegramPlane, FaHeart } from "react-icons/fa";
 import { BsShare } from "react-icons/bs";
 import "../../../assets/styles/dashboard.css";
 
 function Friends() {
   return (
     <div className="inviteContainer">
+      <FaHeart className="loveIcon" size={28} color="pink" />
       <h1>Invite friends!</h1>
       <p>You and your friend will receive bonuses</p>
       <div className="invite-options">
-        <div className="option">
+        <div className="option" data-aos="fade-in">
           <FaGift className="inviteIcon" />
           <h2>Invite a friend</h2>
           <p>
             <span className="bonus">+150</span> for you and your friend
           </p>
         </div>
-        <div className="option">
+        <div className="option" data-aos="fade-in">
           <FaTelegramPlane className="inviteIcon" />
           <h2>Invite a friend with Telegram Premium</h2>
           <p>

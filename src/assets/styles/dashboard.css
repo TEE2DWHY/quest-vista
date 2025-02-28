@@ -4,6 +4,7 @@
   padding: 10px;
   max-width: 500px;
   margin: auto;
+  height: 100%;
   position: relative;
 }
 
@@ -511,7 +512,11 @@
   color: white;
   padding: 20px;
   text-align: center;
-  width: 100%;
+}
+
+.loveIcon {
+  color: linear-gradient(135deg, #1d4ed8, rgb(249, 111, 221));
+  font-size: 20px;
 }
 
 h1 {
@@ -529,22 +534,24 @@ p {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
+  font-size: 18px;
 }
 
 .option {
-  background-color: #222;
-  padding: 10px;
+  background: linear-gradient(135deg, #1d4ed8, rgb(249, 111, 221));
+  padding: 6px;
   border-radius: 8px;
   /* display: flex; */
   align-items: center;
-  animation: slideIn 0.5s ease-out;
 }
 
 .inviteIcon {
-  font-size: 40px;
+  font-size: 30px;
   margin-right: 15px;
-  color: #ffcc00;
+  color: #fff;
   transition: transform 0.3s;
+  font-weight: 900;
 }
 
 .icon:hover {
@@ -606,15 +613,6 @@ p {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
 
