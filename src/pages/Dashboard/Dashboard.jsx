@@ -37,7 +37,7 @@ const Dashboard = () => {
             </div>
 
             {/* My Stake Card */}
-            <div className="stake-card">
+            <div className="stake-card" data-aos="fade-in">
               <p className="card-title">My stake</p>
               <h2 className="amount">$0</h2>
               <p className="currency">0 SUI</p>
@@ -50,7 +50,7 @@ const Dashboard = () => {
             </div>
 
             {/* Earnings Available Card */}
-            <div className="earnings-card">
+            <div className="earnings-card" data-aos="fade-up">
               <p className="card-title">Earnings Available</p>
               <h2 className="amount">$0</h2>
               <p className="currency">0 SUI</p>

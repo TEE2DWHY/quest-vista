@@ -72,7 +72,7 @@ const Tasks = () => {
           <div className="cardContent">
             <h3>Catch the falling stars!</h3>
             <p>
-              Catch 40× daily by using <strong>0.05 APT</strong> 🪙
+              Catch 40× daily by using <strong>0.05 SUI</strong> 🪙
             </p>
             <p className="note">Payment verification will take ~5 mins.</p>
           </div>
