@@ -1,11 +1,10 @@
 /* Dashboard Layout */
 .dashboard {
   color: white;
-  padding: 20px;
+  padding: 10px;
   max-width: 500px;
   margin: auto;
   position: relative;
-  height: 82vh;
 }
 
 /* Header */
@@ -70,8 +69,16 @@
   opacity: 0.8;
 }
 
+.roi-container,
+.timeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .roi {
-  font-size: 14px;
+  font-size: 16px;
   margin: 5px 0;
 }
 
@@ -89,7 +96,7 @@
 }
 
 .timeline {
-  font-size: 12px;
+  font-size: 16px;
   opacity: 0.7;
 }
 
@@ -103,9 +110,6 @@
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
   font-family: inherit;
 }
 
@@ -128,6 +132,7 @@
   flex: 1;
   text-align: center;
   padding: 8px;
+  font-family: inherit;
 }
 
 .nav-button.active {

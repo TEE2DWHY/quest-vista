@@ -137,4 +137,5 @@
 .start-button:hover {
   background-color: #fff;
   transform: translateY(-2px);
+  color: #1b1b1b;
 }

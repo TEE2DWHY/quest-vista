@@ -32,7 +32,7 @@ const Dashboard = () => {
           <div className="dashboard">
             {/* Header */}
             <div className="header">
-              <span className="title">De-Fi</span>
+              <span className="title">@{userName}</span>
               <button className="inviteBtn">Invite friends</button>
             </div>
 
@@ -41,10 +41,12 @@ const Dashboard = () => {
               <p className="card-title">My stake</p>
               <h2 className="amount">$0</h2>
               <p className="currency">0 SUI</p>
-              <p className="roi">
-                NET ROI <span className="roi-positive">+1%</span> ❓
-              </p>
-              <button className="action-button">Deposit</button>
+              <div className="roi-container">
+                <p className="roi">
+                  NET ROI <span className="roi-positive">+1%</span> ❓
+                </p>
+                <button className="action-button">Deposit</button>
+              </div>
             </div>
 
             {/* Earnings Available Card */}
@@ -53,8 +55,10 @@ const Dashboard = () => {
               <h2 className="amount">$0</h2>
               <p className="currency">0 SUI</p>
               <div className="progress-bar"></div>
-              <p className="timeline">Staking timeline ❓</p>
-              <button className="action-button">Withdraw</button>
+              <div className="timeline-container">
+                <p className="timeline">Staking timeline ❓</p>
+                <button className="action-button">Withdraw</button>
+              </div>
             </div>
 
             {/* Bottom Navigation */}
