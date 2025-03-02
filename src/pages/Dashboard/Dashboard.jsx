@@ -24,6 +24,8 @@ const Dashboard = () => {
         return <Tasks />;
       case "Friends":
         return <Friends />;
+      case "Mine":
+        return <Mine />;
       case "Assets":
         return <Assets />;
       case "Home":
@@ -74,7 +76,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <div className="container">{renderContent()}</div>
+      <div>{renderContent()}</div>
       {/* Pass setActiveTab to Footer */}
       <Footer activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>

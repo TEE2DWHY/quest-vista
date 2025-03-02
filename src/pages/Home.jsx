@@ -1,10 +1,10 @@
 import "../assets/styles/home.css";
-// import frameOne from "./assets/images/frame1.png";
 import welcome from "../assets/images/welcome.png";
 import { FaEthereum } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { PiBirdFill } from "react-icons/pi";
 import { useAccount } from "../hooks/useAccount";
+import sonic from "../assets/images/sonic.avif";
 
 function Home() {
   const { userName } = useAccount();
@@ -23,9 +23,9 @@ function Home() {
           </span>
           <span className="subheader-balance">
             <div className="balance-icon-container">
-              <FaEthereum color="#fff" />
+              <img src={sonic} alt="sonic-img" className="sonic" />
             </div>
-            Ethereum
+            Sonic
           </span>
         </div>
 
