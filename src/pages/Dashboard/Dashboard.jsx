@@ -1,21 +1,34 @@
-import "../../assets/styles/dashboard.css";
-import Footer from "./components/Footer";
+import React, { useState, useMemo, useEffect } from "react";
+import { message } from "antd";
+import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { useAccountDetails } from "../../hooks/useAccountDetails";
+import DepositModal from "./components/DepositModal"; // Import the modal component
+import Footer from "./components/Footer";
 import Tasks from "./components/Tasks";
-import { useState } from "react";
 import Mine from "./components/Mine";
 import Friends from "./components/Friends";
 import Assets from "./components/Assets";
 import { GiCycle } from "react-icons/gi";
 import { FaArrowTrendUp } from "react-icons/fa6";
-import { useAccount } from "wagmi";
 import { isUserConnected } from "../../utils/web3CustomFunctions";
-import { message } from "antd";
 
 const Dashboard = () => {
   const { userName } = useAccountDetails();
-  const { isConnected } = useAccount();
   const [messageApi, contextHolder] = message.useMessage();
+  const { connect, connectors, error } = useConnect();
+  const { disconnect } = useDisconnect();
+  const { address: connectedAddress, isConnected } = useAccount();
+  const walletConnect = useMemo(() => {
+    return connectors.find((connector) => connector.name === "WalletConnect");
+  }, [connectors]);
+  const [activeTab, setActiveTab] = useState("Home");
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  useEffect(() => {
+    if (!isConnected) {
+      connect({ connector: walletConnect });
+    }
+  }, [isConnected]);
 
   const handleDeposit = () => {
     if (!isUserConnected(isConnected)) {
@@ -23,20 +36,9 @@ const Dashboard = () => {
         <div className="message">Please Connect Wallet</div>
       );
     }
+    setIsModalVisible(true);
   };
 
-  const withdrawFunds = () => {
-    if (!isUserConnected(isConnected)) {
-      return messageApi.error(
-        <div className="message">Please Connect Wallet</div>
-      );
-    }
-  };
-
-  // State to track active tab
-  const [activeTab, setActiveTab] = useState("Home");
-
-  // Render content based on activeTab
   const renderContent = () => {
     switch (activeTab) {
       case "Task":
@@ -53,20 +55,28 @@ const Dashboard = () => {
           <>
             {contextHolder}
             <div className="dashboard">
-              {/* Header */}
               <div className="dashboard-header">
                 <span className="title">@{userName}</span>
                 <button className="inviteBtn">Invite friends</button>
               </div>
 
-              {/* My Stake Card */}
               <div className="stake-card" data-aos="fade-in">
-                <p className="card-title">My stake</p>
-                <h2 className="amount">$0</h2>
-                <p className="currency">0 QT</p>
+                <div className="stake-card-header">
+                  <p className="card-title">My stake</p>
+                  <span className="stake-note">
+                    Deposit Eth to join our pre-sale.
+                  </span>
+                </div>
+                <div className="stake-amount">
+                  <h2 className="amount">$0</h2>
+                  <span className="minimum-deposit">
+                    Minimum Deposit: 0.12ETH
+                  </span>
+                </div>
+                <p className="currency">0 ETH</p>
                 <div className="roi-container">
                   <p className="roi">
-                    NET ROI <FaArrowTrendUp />
+                    NET ROI <FaArrowTrendUp color="#22c55e" />
                   </p>
                   <button className="action-button" onClick={handleDeposit}>
                     Deposit
@@ -74,7 +84,6 @@ const Dashboard = () => {
                 </div>
               </div>
 
-              {/* Earnings Available Card */}
               <div className="earnings-card" data-aos="fade-up">
                 <p className="card-title">Earnings Available</p>
                 <h2 className="amount">$0</h2>
@@ -82,15 +91,12 @@ const Dashboard = () => {
                 <div className="progress-bar"></div>
                 <div className="timeline-container">
                   <p className="timeline">
-                    Staking timeline <GiCycle />
+                    Staking timeline <GiCycle color="#4873ea" />
                   </p>
-                  <button className="action-button" onClick={withdrawFunds}>
-                    Withdraw
-                  </button>
+                  <button className="action-button">Withdraw</button>
                 </div>
               </div>
 
-              {/* Bottom Navigation */}
               <div className="nav-bar">
                 <button className="nav-button active">Stats</button>
                 <button className="nav-button">Community</button>
@@ -105,8 +111,14 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <div>{renderContent()}</div>
-      {/* Pass setActiveTab to Footer */}
       <Footer activeTab={activeTab} setActiveTab={setActiveTab} />
+
+      {/* Deposit Modal */}
+      <DepositModal
+        isVisible={isModalVisible}
+        onClose={() => setIsModalVisible(false)}
+        onDeposit={() => {}}
+      />
     </div>
   );
 };

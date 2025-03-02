@@ -1,3 +1,59 @@
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.deposit-eth {
+  color: #000;
+  margin: 0;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 83%;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 80%;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: inherit;
+  outline: none;
+  color: #000;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #1d4ed8;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: inherit;
+  margin: 0 10px;
+}
+
+.modal-content button:nth-child(2) {
+  background-color: #ccc;
+  margin-left: 10px;
+}
+
 /* Dashboard Layout */
 .dashboard {
   color: white;
@@ -54,6 +110,34 @@
   margin-top: 15px;
   position: relative;
   margin-bottom: 40px;
+}
+
+.stake-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stake-note {
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #ffffff88;
+  color: #464444;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.stake-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.minimum-deposit {
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .card-title {
@@ -255,7 +339,7 @@
   align-items: center;
   font-size: 24px;
   background-color: #1d4ed8;
-  border: 2px solid #1d4ed8;
+  border: 2px solid #4873ea;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
