@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import AccountWrapper from "./hooks/useAccount";
+import AccountWrapper from "./hooks/useAccountDetails";
 import Animate from "./utils/Animate";
 import { WagmiProvider } from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";

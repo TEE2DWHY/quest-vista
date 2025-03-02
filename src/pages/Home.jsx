@@ -3,11 +3,11 @@ import welcome from "../assets/images/welcome.png";
 import { FaEthereum } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { PiBirdFill } from "react-icons/pi";
-import { useAccount } from "../hooks/useAccount";
+import { useAccountDetails } from "../hooks/useAccountDetails";
 import sonic from "../assets/images/sonic.avif";
 
 function Home() {
-  const { userName } = useAccount();
+  const { userName } = useAccountDetails();
 
   return (
     <>

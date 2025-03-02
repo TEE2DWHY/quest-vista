@@ -32,6 +32,6 @@ const AccountWrapper = ({ children }) => {
 
 export default AccountWrapper;
 
-export const useAccount = () => {
+export const useAccountDetails = () => {
   return useContext(accountContext);
 };
