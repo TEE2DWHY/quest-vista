@@ -5,17 +5,17 @@ import { useConnect, useAccount, useDisconnect } from "wagmi";
 const Assets = () => {
   const { connect, connectors, error } = useConnect();
   const { disconnect } = useDisconnect();
-
   const { address: connectedAddress, isConnected } = useAccount();
-  const walletConnect = useMemo(() => {
-    return connectors.find((connector) => connector.name === "WalletConnect");
+
+  const metaMask = useMemo(() => {
+    return connectors.find((connector) => connector.name === "MetaMask");
   }, [connectors]);
 
   useEffect(() => {
     if (!isConnected) {
-      connect({ connector: walletConnect });
+      connect({ connector: metaMask });
     }
-  }, [isConnected]);
+  }, []);
 
   useEffect(() => {
     if (error) {
@@ -52,14 +52,12 @@ const Assets = () => {
           <div className="card-content">
             <div className="card-text">
               <h3>Claim On-Chain</h3>
-              <p>Connect via WalletConnect</p>
+              <p>Connect via MetaMask</p>
             </div>
             <button
               className="action-btn"
               onClick={() => {
-                !isConnected
-                  ? connect({ connector: walletConnect })
-                  : disconnect();
+                !isConnected ? connect({ connector: metaMask }) : disconnect();
               }}
             >
               {isConnected

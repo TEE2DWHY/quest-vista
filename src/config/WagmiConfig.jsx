@@ -6,7 +6,7 @@ const projectId = import.meta.env.VITE_PROJECT_ID;
 
 export const config = createConfig({
   chains: [sonic],
-  connectors: [walletConnect({ projectId })],
+  connectors: [metaMask()],
   transports: {
     [sonic.id]: http(),
   },
