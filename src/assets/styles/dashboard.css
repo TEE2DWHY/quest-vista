@@ -191,11 +191,11 @@
 }
 
 .tab {
-  padding: 10px 20px;
+  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 20px;
   background-color: #f9f9f9;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
   position: relative;
   color: #333;
@@ -508,6 +508,7 @@
   justify-content: center;
   gap: 10px;
   font-weight: 900;
+  color: #fff;
 }
 
 .mineButton:hover {
@@ -579,7 +580,7 @@
 }
 
 h1 {
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
   margin-bottom: 10px;
   animation: fadeIn 1s ease-in;
 }
@@ -594,7 +595,7 @@ p {
   flex-direction: column;
   gap: 20px;
   /* width: 100%; */
-  font-size: 18px;
+  width: 100%;
 }
 
 .option {
@@ -603,7 +604,7 @@ p {
   border-radius: 8px;
   /* display: flex; */
   align-items: center;
-  width: 100%;
+  width: 95%;
 }
 
 .inviteIcon {

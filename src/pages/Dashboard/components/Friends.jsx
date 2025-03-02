@@ -12,14 +12,14 @@ function Friends() {
       <div className="invite-options">
         <div className="option" data-aos="fade-in">
           <FaGift className="inviteIcon" />
-          <h2>Invite a friend</h2>
+          <h4>Invite a friend</h4>
           <p>
             <span className="bonus">+150</span> for you and your friend
           </p>
         </div>
         <div className="option" data-aos="fade-in">
           <FaTelegramPlane className="inviteIcon" />
-          <h2>Invite a friend with Telegram Premium</h2>
+          <h4>Invite a friend with Telegram Premium</h4>
           <p>
             <span className="bonus">+250</span> for you and your friend
           </p>
