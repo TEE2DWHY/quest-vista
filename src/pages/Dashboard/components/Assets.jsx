@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 import "../../../assets/styles/dashboard.css";
+import { useConnect, useAccount, useDisconnect } from "wagmi";
 
 const Assets = () => {
+  const { connect, connectors, error } = useConnect();
+  const { disconnect } = useDisconnect();
+
+  const { address: connectedAddress, isConnected } = useAccount();
+  const walletConnect = useMemo(() => {
+    return connectors.find((connector) => connector.name === "WalletConnect");
+  }, [connectors]);
+
+  useEffect(() => {
+    if (!isConnected) {
+      connect({ connector: walletConnect });
+    }
+  }, [isConnected]);
+
+  useEffect(() => {
+    if (error) {
+      console.error("Error connecting: ", error);
+    }
+  }, [error]);
   return (
     <div className="assets-container">
       <div className="header">
@@ -18,7 +38,6 @@ const Assets = () => {
       </div>
 
       <div className="card-container">
-        {/* Stake & Earn */}
         <div className="card" data-aos="fade-in" aos-duration="3000">
           <div className="card-content">
             <div className="card-text">
@@ -29,18 +48,29 @@ const Assets = () => {
           </div>
         </div>
 
-        {/* Claim On-Chain */}
         <div className="card" data-aos="fade-in" aos-duration="3600">
           <div className="card-content">
             <div className="card-text">
               <h3>Claim On-Chain</h3>
-              <p>Bitget Wallet Lite</p>
+              <p>Connect via WalletConnect</p>
             </div>
-            <button className="action-btn">Connect</button>
+            <button
+              className="action-btn"
+              onClick={() => {
+                !isConnected
+                  ? connect({ connector: walletConnect })
+                  : disconnect();
+              }}
+            >
+              {isConnected
+                ? `${connectedAddress.slice(0, 3)}...${connectedAddress.slice(
+                    39
+                  )}`
+                : "Connect"}
+            </button>
           </div>
         </div>
 
-        {/* Transfer Tokens */}
         <div className="card" data-aos="fade-in" aos-duration="4000">
           <div className="card-content">
             <div className="card-text">
