@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from "react";
 import { message } from "antd";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { useAccountDetails } from "../../hooks/useAccountDetails";
-import DepositModal from "./components/DepositModal"; // Import the modal component
+import DepositModal from "./components/DepositModal";
 import Footer from "./components/Footer";
 import Tasks from "./components/Tasks";
 import Mine from "./components/Mine";
@@ -11,6 +11,7 @@ import Assets from "./components/Assets";
 import { GiCycle } from "react-icons/gi";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { isUserConnected } from "../../utils/web3CustomFunctions";
+import { CiLink } from "react-icons/ci";
 
 const Dashboard = () => {
   const { userName } = useAccountDetails();
@@ -91,12 +92,33 @@ const Dashboard = () => {
                 <div className="progress-bar"></div>
                 <div className="timeline-container">
                   <p className="timeline">
-                    Staking timeline <GiCycle color="#4873ea" />
+                    Staking timeline <GiCycle color="#fff" />
                   </p>
                   <button className="action-button">Withdraw</button>
                 </div>
               </div>
-
+              <div className="connect-wallet">
+                <button
+                  onClick={() => {
+                    !isConnected
+                      ? connect({ connector: walletConnect })
+                      : disconnect();
+                  }}
+                  className="connect-wallet-button"
+                >
+                  {isConnected ? (
+                    <div className="connected-address">
+                      <CiLink size={28} />{" "}
+                      {`${connectedAddress.slice(
+                        0,
+                        4
+                      )}...${connectedAddress.slice(38)}`}
+                    </div>
+                  ) : (
+                    "Connect Wallet"
+                  )}
+                </button>
+              </div>
               <div className="nav-bar">
                 <button className="nav-button active">Stats</button>
                 <button className="nav-button">Community</button>
@@ -113,7 +135,6 @@ const Dashboard = () => {
       <div>{renderContent()}</div>
       <Footer activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      {/* Deposit Modal */}
       <DepositModal
         isVisible={isModalVisible}
         onClose={() => setIsModalVisible(false)}

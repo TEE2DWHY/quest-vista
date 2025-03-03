@@ -206,6 +206,42 @@
   font-family: inherit;
 }
 
+.connect-wallet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for the connect wallet button */
+.connect-wallet-button {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -15px 0 15px 0;
+}
+
+/* Styling for the connected address section */
+.connected-address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Adds space between the icon and the address */
+}
+
+/* Optional: Styling for the wallet address */
+.connected-address span {
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
 /* Navigation */
 .nav-bar {
   display: flex;
